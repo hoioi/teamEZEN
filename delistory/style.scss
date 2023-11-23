@@ -1,0 +1,810 @@
+@import url("./reset.css");
+
+$color: (
+  twosomepoint: #d50037,
+  darkgray: #777777,
+  middlegray: #707070,
+  semiblack: #333333,
+  lightgray: #efefef,
+);
+$delimenu-font: (
+  kortitle: 2rem,
+  engtitle: 1rem,
+);
+$modal-font: (
+  title: 3.8rem,
+  subtitle: 2rem,
+  table: 1.3rem,
+);
+// container
+section {
+  width: 100%;
+  max-width: 131.2rem;
+  height: inherit;
+  margin: 0 auto;
+  padding: 15.2rem 4.8rem 24rem;
+}
+// header
+.top {
+  display: block;
+  ul {
+    display: flex;
+    li {
+      a {
+        font: 700 1.4rem "Noto Sans KR";
+      }
+      &:first-child {
+        a {
+          color: map-get($color, middlegray);
+        }
+      }
+      &:last-child {
+        display: flex;
+        align-items: center;
+        a {
+          color: map-get($color, twosomepoint);
+        }
+        margin-left: 0.5em;
+      }
+      &:last-child::before {
+        content: "";
+        display: inline-block;
+        width: 0.3rem;
+        height: 0.3rem;
+        background: #000;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+      }
+    }
+  }
+  margin-bottom: 5.6rem;
+}
+
+// main
+.delistory {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  .deli_title {
+    font: 700 7.2rem "Noto Sans KR";
+    margin-bottom: 3rem;
+  }
+}
+.deli_contents {
+  display: flex;
+  align-items: center;
+  .deli_txt {
+    padding-right: 10vw;
+    .deli_Engtitle {
+      font: 5.5rem/1.5 "Montserrat";
+      margin-bottom: 3rem;
+    }
+    .deli_subtitle {
+      font: 900 3.4rem/1.5 "";
+      word-break: keep-all;
+      margin-bottom: 3rem;
+    }
+    .deli_desc {
+      font: 400 1.8rem/1.5 "Noto Sans KR";
+      color: map-get($color, semiblack);
+      word-break: keep-all;
+    }
+  }
+  .deli_img {
+    img {
+      width: 48.6rem;
+      height: 65.4rem;
+    }
+  }
+  margin-bottom: 5rem;
+}
+
+// slider
+.deli_menu {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .menu_title {
+    font: 700 4rem/1 "Noto Sans KR";
+    margin-bottom: 3rem;
+  }
+}
+.swiper {
+  width: 96%;
+  height: 100%;
+}
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.menu_slide {
+  width: inherit;
+  .menu_slide_item {
+    width: 21.7rem;
+    height: 21.7rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: inherit;
+      height: inherit;
+      background: map-get($color, twosomepoint);
+      opacity: 0;
+      transition: 0.5s;
+      z-index: 2;
+    }
+    &:hover::before {
+      opacity: 0.7;
+    }
+    &:hover .menu_txt {
+      opacity: 1;
+    }
+    .menu_img {
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+    }
+    .menu_txt {
+      position: absolute;
+      text-align: center;
+      width: 80%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      word-break: keep-all;
+      z-index: 3;
+      opacity: 0;
+      transition: 0.5s;
+      p:first-child {
+        font: 700 2.4rem/1.2 "Noto Sans KR";
+        color: white;
+        margin-bottom: 0.6rem;
+      }
+      p:last-child {
+        font: 400 1.6rem/1.2 "";
+        color: white;
+      }
+    }
+  }
+}
+
+// modal
+.modal {
+  position: fixed;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 110rem;
+  height: 70rem;
+  background: map-get($color, lightgray);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.5rem;
+  display: none;
+  overflow: hidden;
+  z-index: 3;
+  .xbtn {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 3.2rem;
+    cursor: pointer;
+    span {
+      font-size: 3rem;
+      color: map-get($color, darkgray);
+    }
+  }
+  .modal_img {
+    width: 49.6rem;
+    height: 100%;
+    margin-right: 4rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .modal_info {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    .food_txt {
+      text-align: left;
+    }
+    .foodtxt_title {
+      font: 700 3.8rem/1 "Noto Sans KR";
+      margin-bottom: 1.1rem;
+    }
+    .foodtxt_subtitle {
+      font: 400 2rem/1 "Noto Sans KR";
+      color: map-get($color, twosomepoint);
+    }
+    .foodtxt_desc {
+      font: 400 2rem/1.5 "Noto Sans KR";
+      color: map-get($color, semiblack);
+      word-break: keep-all;
+      margin-top: 2rem;
+    }
+    .foodtxt_allergy {
+      display: flex;
+      align-items: start;
+      gap: 0.5rem;
+      margin: 2.8rem 0;
+      .foodtxt_allergy_desc,
+      .foodtxt_allergy_title {
+        font: 400 1.3rem/1.2 "Noto Sans KR";
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.6rem;
+        margin-right: 0.3rem;
+        margin-top: 0.5rem;
+        background: map-get($color, twosomepoint);
+      }
+    }
+    .foodinfo {
+      .foodinfo_title {
+        font: 500 2rem/1 "Noto Sans KR";
+        color: map-get($color, semiblack);
+        margin-bottom: 1.5rem;
+      }
+    }
+    .foodinfo_table {
+      width: 50rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      div {
+        font: 400 1.3rem/1 "Noto Sans KR";
+        color: map-get($color, semiblack);
+        border-top: 1px solid #777777;
+        padding: 1rem;
+        &:nth-child(1),
+        &:nth-child(2) {
+          border-top: 2px solid #777777;
+        }
+        &:last-child,
+        &:nth-child(13) {
+          border-bottom: 2px solid #777777;
+        }
+        &:nth-child(even) {
+          text-align: right;
+        }
+        &:nth-child(odd) {
+          text-align: left;
+          font: 500 1.3rem/1 "Noto Sans KR";
+        }
+      }
+    }
+  }
+}
+.modal.on {
+  display: flex;
+}
+
+// footer
+.footer {
+  width: 100%;
+  padding: 4.6rem 4.8rem;
+  margin: 0 auto;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  .footer_top {
+    display: flex;
+    justify-content: space-between;
+    .footer_top_left {
+      text-align-last: left;
+      li a {
+        color: white;
+        font: 700 2.4rem/2 "";
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .footer_top_right {
+      .footer_top_right_title {
+        font: 700 1.4rem/1 "";
+        color: white;
+        margin-bottom: 1rem;
+      }
+      .footer_top_right_item1 li:last-child {
+        font: 400 1.2rem/1 "";
+        color: #777;
+        margin-bottom: 3rem;
+      }
+      .right_item2_txt {
+        display: flex;
+        gap: 1.5rem;
+        li {
+          font: 400 1.2rem/1 "";
+          color: #777;
+        }
+      }
+    }
+  }
+  .footer_bottom {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 4.8rem;
+    padding-top: 4.8rem;
+    .footer_bottom_info_item {
+      display: none;
+      li {
+        color: #777777 !important;
+        font-size: 1.4rem !important;
+        margin-bottom: 1rem;
+      }
+    }
+    .footer_bottom_top {
+      ul li {
+        float: left;
+        margin-right: 5rem;
+        margin-bottom: 3rem;
+        a {
+          font: 700 1.4rem/1 "";
+          color: white;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        &:nth-child(2) a {
+          color: #f5ce3e;
+        }
+      }
+    }
+    .footer_bottom_item1,
+    .footer_bottom_item2,
+    .footer_bottom_item3 {
+      display: flex;
+      li {
+        color: #777777 !important;
+        font-size: 1.4rem !important;
+        margin-bottom: 1rem;
+      }
+    }
+    .footer_bottom_item1,
+    .footer_bottom_item2 {
+      li {
+        &:not(li:first-child):before {
+          content: "";
+          display: inline-block;
+          width: 0.1rem;
+          height: 1.1rem;
+          border-left: 1px solid #777;
+          margin: 0 1.2rem;
+        }
+      }
+    }
+    .footer_bottom_item3 {
+      margin-bottom: 2.4rem;
+      li {
+        margin-right: 1.2rem;
+      }
+    }
+    .sns {
+      ul {
+        display: flex;
+        justify-content: end;
+        li {
+          width: 3.2rem;
+          height: 3.2rem;
+          border: 1px solid #777777;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 1rem;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        li a i {
+          font-size: 1.7rem;
+          color: #777777;
+        }
+      }
+    }
+  }
+}
+
+// media
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 10px;
+  }
+  #container {
+    // 6px 기준임
+    section {
+      max-width: 80%;
+      // padding: 20rem 0 24rem 0;
+      overflow: hidden;
+    }
+  }
+  .top {
+    ul {
+      li {
+        &:last-child::before {
+          content: "";
+          margin-bottom: 0.5rem;
+          margin-right: 0.5rem;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .delistory {
+    .deli_title {
+      margin-bottom: 8rem;
+    }
+    .deli_contents {
+      .deli_txt {
+        .deli_subtitle,
+        .deli_Engtitle {
+          margin-bottom: 5rem;
+        }
+      }
+      .deli_img {
+        width: 200%;
+        img {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .swiper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .swiper-slide {
+    width: 100%;
+    margin: 0;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 60%;
+    z-index: 5;
+  }
+  .swiper-button-prev {
+    left: 0.5rem;
+  }
+  .swiper-button-next {
+    right: 0.5rem;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 5rem;
+    color: map-get($color, darkgray);
+  }
+  .menu_slide {
+    width: 100%;
+    height: 100%;
+    .menu_slide_item {
+      width: 100%;
+      height: 20rem;
+      .menu_img {
+        width: 100%;
+        height: inherit;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .menu_txt {
+        width: 90%;
+        height: 80%;
+      }
+    }
+  }
+  .modal {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    z-index: 6;
+    .modal_img {
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #container {
+    section {
+      max-width: 80%;
+      overflow: hidden;
+    }
+  }
+  .top {
+    ul li {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .modal {
+    width: 90%;
+    .modal_img {
+      width: 45%;
+      margin-right: 2rem;
+    }
+    .modal_info {
+      width: 55%;
+      margin: 0 auto;
+      .food_txt {
+        width: 95%;
+        .foodinfo_table {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html,
+  body {
+    font-size: 6px;
+  }
+  #container {
+    section {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .top {
+    display: none;
+  }
+  .delistory {
+    .deli_title {
+      font-size: 5.2rem;
+      margin-bottom: 5rem;
+      padding-right: 0;
+      text-indent: 3rem;
+    }
+    .deli_contents {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15rem;
+      .deli_img {
+        order: 1;
+        justify-items: center;
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .deli_txt {
+        order: 2;
+        margin: -7rem 3rem;
+        .deli_subtitle {
+          font-size: 3.4rem;
+        }
+        .deli_desc {
+          font-size: 2.67rem;
+        }
+      }
+    }
+    .menu_txt {
+      &:first-child {
+        font-size: 5rem;
+      }
+      &:last-child {
+        font-size: 3rem;
+      }
+    }
+  }
+  .menu_title {
+    text-indent: 3rem;
+  }
+  .menu_slide {
+    width: 100%;
+    height: 100%;
+    .menu_slide_item {
+      height: 45rem;
+      .menu_txt {
+        .menu_kortitle {
+          font-size: 5rem !important;
+        }
+        .menu_engtitle {
+          font-size: 3rem !important;
+        }
+      }
+    }
+  }
+  .modal {
+    width: 70rem;
+    height: 110rem;
+    flex-direction: column;
+    top: 28%;
+    .modal_img {
+      width: 100%;
+      height: 45%;
+      img {
+        object-fit: cover;
+      }
+    }
+    .modal_info {
+      width: 90%;
+      margin: 0 auto;
+      justify-content: center;
+      .foodinfo_table {
+        width: 100%;
+        div {
+          font-size: 1.5rem !important;
+        }
+      }
+    }
+  }
+
+  // footer
+  .footer {
+    .footer_top_right {
+      display: none;
+    }
+    .footer_top_left {
+      li a {
+        font-size: 3rem !important;
+      }
+    }
+    .footer_bottom {
+      flex-direction: column;
+      .footer_bottom_info_item {
+        display: block;
+      }
+      .footer_bottom_top {
+        ul li a {
+          font-size: 2rem !important;
+        }
+      }
+      .footer_bottom_item1,
+      .footer_bottom_item2,
+      .footer_bottom_item3 {
+        flex-direction: column;
+        li {
+          font-size: 2rem !important;
+        }
+      }
+      .footer_bottom_item1,
+      .footer_bottom_item2 {
+        li {
+          &:not(li:first-child):before {
+            content: "";
+            display: inline-block;
+            border-left: none;
+            margin: 0;
+          }
+        }
+      }
+      .footer_bottom_info_item {
+        li {
+          font-size: 2rem !important;
+        }
+      }
+      .sns {
+        ul {
+          justify-content: start;
+          li {
+            width: 5.3rem;
+            height: 5.3rem;
+            border: 1px solid #777777;
+            margin-right: 1.6rem;
+          }
+          li a i {
+            font-size: 2.9rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  * {
+    font-size: 4px;
+  }
+  .menu_kortitle {
+    font-size: 5rem !important;
+  }
+  .menu_engtitle {
+    font-size: 3rem !important;
+  }
+  .modal {
+    top: 35%;
+    width: 80%;
+    z-index: 5;
+    .modal_info {
+      width: 85%;
+      margin: 0 auto;
+      .foodtxt_desc {
+        font-size: 2rem;
+      }
+      .foodinfo_title {
+        font-size: 2.4rem !important;
+      }
+      .foodtxt_allergy_title,
+      .foodtxt_allergy_desc {
+        font-size: 1.7rem !important;
+      }
+      .foodinfo_table {
+        div {
+          font-size: 1.7rem !important;
+        }
+      }
+    }
+  }
+
+  // footer
+  .footer {
+    .footer_top_left {
+      li a {
+        font-size: 4.5rem !important;
+      }
+    }
+    .footer_bottom {
+      .footer_bottom_info_item {
+        display: block;
+        li {
+          font-size: 3rem !important;
+        }
+      }
+      .footer_bottom_top {
+        ul li a {
+          font-size: 3rem !important;
+        }
+      }
+      .footer_bottom_item1,
+      .footer_bottom_item2,
+      .footer_bottom_item3 {
+        flex-direction: column;
+        li {
+          font-size: 3rem !important;
+        }
+      }
+      .footer_bottom_info_item {
+        li {
+          font-size: 3rem !important;
+        }
+      }
+      .sns {
+        ul {
+          li {
+            width: 8rem;
+            height: 8rem;
+            border: 1px solid #777777;
+            margin-right: 2.5rem;
+          }
+          li a i {
+            font-size: 4.25rem !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "name": "호밀 B. E. L. T",
+    "engname": "Rye B. E. L. T",
+    "description": "구수한 호밀 식빵에 베이컨, 계란과 양상추, 토마토를 듬뿍 넣어 풍성한 샌드위치",
+    "allergy": "밀, 우유, 계란, 대두, 토마토, 쇠고기, 돼지고기, 아황산류, 조개류(굴)",
+    "image": "./deli_img/img_p_delimenu1.jpg",
+    "nutrition": [
+      "206g(총 제공량 : 1)",
+      "206g",
+      "590Kcal",
+      "8g",
+      "35g/64%",
+      "11g/73%",
+      "1310g/66%"
+    ]
+  },
+  {
+    "name": "페스토 햄치즈 파니니",
+    "engname": "Pesto Ham&Cheese Panini",
+    "description": "올리브 치아바타에 바질페스토, 닭가슴살 햄, 후레쉬 모짜렐라 치즈, 토마토를 곁들인 따뜻한 샌드위치",
+    "allergy": "우유, 대두, 밀, 토마토, 닭고기",
+    "image": "./deli_img/img_p_delimenu2.jpg",
+    "nutrition": [
+      "205g(총 제공량 : 1)",
+      "205g",
+      "460Kcal",
+      "7g",
+      "24g/32%",
+      "9g/60%",
+      "1300g/65%"
+    ]
+  },
+  {
+    "name": "# 베리 머치 에그",
+    "engname": "Very Much Egg",
+    "description": "촉촉한 에그 샐러드를 풍성하게 채운 브리오슈 번",
+    "allergy": "계란, 우유, 대두, 밀, 조개류(굴)",
+    "image": "./deli_img/img_p_delimenu3.jpg",
+    "nutrition": [
+      "105g(총 제공량 : 1)",
+      "105g",
+      "340Kcal",
+      "2g",
+      "9g/16%",
+      "9g/60%",
+      "380g/19%"
+    ]
+  },
+  {
+    "name": "코코넛 카야 크루아상",
+    "engname": "Coconut Kaya Croissant",
+    "description": "향긋한 코코넛칩 토핑과 카야잼으로 채운 크루아상",
+    "allergy": "계란, 우유, 대두, 밀",
+    "image": "./deli_img/img_p_delimenu4.jpg",
+    "nutrition": [
+      "100g(총 제공량 : 1)",
+      "100g",
+      "305Kcal",
+      "8g",
+      "6g/11%",
+      "4.1g/27%",
+      "250g/13%"
+    ]
+  },
+  {
+    "name": "치킨 시저 샐러드",
+    "engname": "Chicken Caesar Salad",
+    "description": "닭가슴살, 고구마, 단호박, 계란이 담긴 담백한 샐러드",
+    "allergy": "알류(달걀), 우유, 대두, 밀, 게, 토마토, 닭고기, 쇠고기",
+    "image": "./deli_img/img_p_delimenu5.jpg",
+    "nutrition": [
+      "287g(총 제공량 : 1)",
+      "287g",
+      "290Kcal",
+      "7g",
+      "15g/27%",
+      "3.6g/24%",
+      "750g/38%"
+    ]
+  }
+]

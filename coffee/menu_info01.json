@@ -1,0 +1,32 @@
+[
+  {
+    "titleName": "블랙그라운드",
+    "LogoName": "TWOSOME Spanish Condensed Milk Café Latte",
+    "sub": "입안 가득 꽉 찬 바디감과 다크 초콜릿의 향이<br />느껴지는 원두",
+    "CountryText": "원산지: 브라질, 콜롬비아산, 과테말라산, 에티오피아산",
+    "Rost": "Dark Roast",
+    "image": "./imgs/coffee/black_ground.png",
+    "image_mobile": "./imgs/coffee/black_ground450.png",
+    "Rosttext": ["Full-Body", "Nutty", "Chocolaty"]
+  },
+  {
+    "titleName": "아로마노트",
+    "LogoName": "TWOSOME Aromanote",
+    "sub": "플로럴한 아로마와 함께 싱그러운 과일향이<br />느껴지는 원두",
+    "CountryText": "원산지: 에티오피아(Natural), 과테말라",
+    "Rost": "Medium Roast",
+    "image": "./imgs/coffee/aromanote.png",
+    "image_mobile": "./imgs/coffee/aromanote450.png",
+    "Rosttext": ["Berry-like", "Juicy", "Floral"]
+  },
+  {
+    "titleName": "SWP. 디카페인",
+    "LogoName": "TWOSOME SWP.DECAF",
+    "sub": "견과류의 고소함과 은은한 단맛이 조화로운<br />디카페인 원두",
+    "CountryText": "원산지: 콜롬비아, 브라질",
+    "Rost": "Dark Roast",
+    "image": "./imgs/coffee/swpdecaf.png",
+    "image_mobile": "./imgs/coffee/swpdecaf450.png",
+    "Rosttext": ["Rich", "Sweet", "Well-Balanced"]
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "name": "스트로베리 초콜릿 생크림",
+    "engname": "Strawberry Chocolate Fresh Cream Cake",
+    "description": "한가득 올린 상큼한 딸기, 크런치 초코볼이 초콜릿 생크림 사이사이 씹히는 투썸 시그니처 케이크",
+    "allergy": "알레르기 유발 성분 : 우유, 대두, 밀, 계란",
+    "image": "./dessert/strawberry.jpg",
+    "nutrition": [
+      "213g(총 제공량 : 1)",
+      "1조각",
+      "615Kcal",
+      "37g",
+      "8g/15%",
+      "24g/160%",
+      "170g/9%"
+    ]
+  },
+  {
+    "name": "마스카포네 티라미수",
+    "engname": "Mascarpone Tiramisu",
+    "description": "마스카포네 치즈 크림과 에스프레소 커피 시럽이 촉촉하게 어우러진 이탈리안 무스 케이크",
+    "allergy": "알레르기 유발 성분 : 우유, 대두, 밀, 계란, 돼지고기",
+    "image": "./dessert/Tiraisu.jpg",
+    "nutrition": [
+      "144g(총 제공량 : 1)",
+      "1조각",
+      "430Kcal",
+      "22g",
+      "7g/12%",
+      "23g/153%",
+      "35g/2%"
+    ]
+  },
+  {
+    "name": "레드벨벳",
+    "engname": "Red Velvet",
+    "description": "붉은 컬러 시트에 고소한 버터 크림치즈를 풍부하게 올려 불륨감이 돋보이는 투썸 대표 구움 케이크",
+    "allergy": "계란, 우유, 대두, 밀, 아황산류,쇠고기",
+    "image": "./dessert/red velvet.jpg",
+    "nutrition": [
+      "149g(총 제공량 : 1)",
+      "1조각",
+      "480Kcal",
+      "25g",
+      "6g/11%",
+      "20g/133%",
+      "360g/18%"
+    ]
+  },
+  {
+    "name": "뉴욕 치즈 케이크",
+    "engname": "New York Cheese Cake",
+    "description": "부드럽고 촉촉한 식감과 진한 치즈의 맛을 느낄 수 있는 정통 뉴욕 스타일의 구움 치즈 케이크",
+    "allergy": "계란, 우유, 대두, 밀, 쇠고기",
+    "image": "./dessert/new York.jpg",
+    "nutrition": [
+      "102g(총 제공량 : 1)",
+      "1조각",
+      "330Kcal",
+      "19g",
+      "5g/9%",
+      "13g/87%",
+      "195g/10%"
+    ]
+  },
+  {
+    "name": "아이스 박스",
+    "engname": "Ice Box Spoon Cake",
+    "description": "마스카포네 크림 사이사이 블랙 쿠키를 층층이 쌓고 촉촉하고 부드럽게 즐길 수 있는 아메리칸 스타일의 케이크",
+    "allergy": "계란, 우유, 대두, 밀, 돼지고기",
+    "image": "./dessert/ice box spoon cake.jpg",
+    "nutrition": [
+      "183g(총 제공량 : 1)",
+      "1조각",
+      "640Kcal",
+      "33g",
+      "7g/13%",
+      "29g/193%",
+      "330g/17%"
+    ]
+  },
+  {
+    "name": "마카롱 세트(6개입)",
+    "engname": "Macaron Set(6ea)",
+    "description": "생생한 컬러, 녹아내리듯 부서지는 크런치함, 풍부한 크림의 촉촉한 부드러움, 입안 가득 퍼지는 달콤한 마카롱을 다양하게 맛볼 수 있는 마카롱 세트",
+    "allergy": " 공통:계란,우유,대두,밀/청포도 요거트 마카롱:쇠고기함유/블루베리마카롱:아황산류 함유",
+    "image": "./dessert/macaron set.jpg",
+    "nutrition": ["(총 제공량 : 6)", "0", "0", "0", "0", "0", "0"]
+  },
+  {
+    "name": "소프트 아이스크림(컵)",
+    "engname": "Soft Ice Cream(Cup)",
+    "description": "입안 가득 꽉 차는 크리미한 풍미의 부드러운 소프트 아이스크림",
+    "allergy": "계란, 우유",
+    "image": "./dessert/sort ice cup.jpg",
+    "nutrition": [
+      "110g(총 제공량 : 1)",
+      "1컵",
+      "175Kcal",
+      "19g",
+      "3g/5%",
+      "5.2g/35%",
+      "75g/4%"
+    ]
+  }
+]

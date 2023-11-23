@@ -1,0 +1,255 @@
+header {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 999;
+  transition: all 0.3s;
+}
+
+.logo {
+  text-align: center;
+  margin-left: 10%;
+}
+
+.logo .black {
+  width: 20rem;
+}
+
+.logo .white {
+  width: 20rem;
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 7rem;
+  align-items: center;
+  margin-right: 10%;
+}
+
+.nav p {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav .focus {
+  color: var(--main-color);
+}
+
+.nav p:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.trigger {
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+  cursor: pointer;
+  display: none;
+  margin-right: 10%;
+  z-index: 700;
+}
+
+.trigger span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.trigger span:nth-child(1) {
+  top: 0;
+}
+.trigger span:nth-child(2) {
+  top: 50%;
+}
+.trigger span:nth-child(3) {
+  top: 100%;
+}
+
+.trigger.active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+  background: #fff;
+}
+.trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+.trigger.active span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+  background: #fff;
+}
+
+header.sticky {
+  width: 100%;
+  height: 10rem;
+  background: #333;
+  opacity: 95%;
+}
+
+header.sticky::after {
+  width: inherit;
+  height: inherit;
+  filter: blur(3px);
+}
+
+header.sticky .logo h2,
+header.sticky .logo span,
+header.sticky .nav a p {
+  color: #fff;
+}
+
+header.sticky .logo .black {
+  display: none;
+}
+
+header.sticky .logo .white {
+  display: block;
+}
+
+header.sticky .nav a p:hover {
+  color: var(--main-color);
+}
+
+header.sticky .nav .focus {
+  color: var(--main-color);
+}
+
+header.sticky .trigger span {
+  background: #fff;
+}
+
+.dropmenu {
+  width: 100%;
+  height: 100vh;
+  background: #333;
+  position: fixed;
+  transform: translateX(110%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 900;
+  display: none;
+}
+
+.dropmenu .nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rem;
+  align-items: start;
+  margin-left: 40%;
+}
+
+.dropmenu .nav p {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 900;
+  transition: all 0.5s;
+}
+
+.dropmenu .nav:hover p {
+  opacity: 0.3;
+}
+
+.dropmenu .nav p:hover {
+  opacity: 1;
+  transform: translateX(10%);
+}
+
+.dropmenu .nav p:hover::before {
+  left: -15%;
+  opacity: 1;
+}
+
+.dropmenu .nav p::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 40%;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--main-color);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.dropmenu .nav .focus {
+  color: var(--main-color);
+}
+
+.drop {
+  transform: translateX(0%);
+}
+
+@media screen and (max-width: 1200px) {
+  .nav {
+    display: none;
+  }
+  .trigger {
+    display: block;
+  }
+
+  .dropmenu {
+    display: block;
+  }
+}
+@media all and (max-width: 900px) {
+  body,
+  html {
+    font-size: 6px;
+  }
+  header,
+  header.sticky {
+    height: 10rem;
+  }
+  .logo .black,
+  .logo .white {
+    width: 140px;
+  }
+  .trigger {
+    width: 25px;
+    height: 15px;
+  }
+  .trigger span {
+    height: 1px;
+  }
+  .dropmenu .nav {
+    margin-top: 33rem;
+    margin-left: 30%;
+    gap: 10rem;
+  }
+  .dropmenu .nav p {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 4px;
+  }
+  header,
+  header.sticky {
+    height: 60px;
+  }
+  .trigger {
+    width: 20px;
+    height: 10px;
+  }
+  .trigger span {
+    height: 1.5px;
+  }
+  .dropmenu .nav {
+    margin-top: 30%;
+    margin-left: 30%;
+    height: 70%;
+    justify-content: space-around;
+    gap: 1.5rem;
+  }
+  .dropmenu .nav p {
+    font-size: 6rem;
+  }
+}

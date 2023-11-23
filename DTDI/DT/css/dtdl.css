@@ -1,0 +1,276 @@
+/* section */
+.dt-main {
+  width: 100%;
+  max-width: 131.2rem;
+  margin: 0 auto;
+  padding: 15.2rem 4.8rem 24rem;
+  box-sizing: border-box;
+}
+
+/* dt-nav */
+
+.dt-nav ul {
+  display: flex;
+}
+.dt-nav ul li a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #707070;
+}
+
+.dt-nav ul .dt-box {
+  display: flex;
+  align-items: center;
+}
+.dt-nav ul .dt-box::after {
+  content: "";
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: #000;
+}
+
+.dt-nav ul .dt-red a {
+  color: #d50037;
+  font-weight: 700;
+}
+
+/* dt-title */
+.dt-title {
+  margin-top: 5.6rem;
+}
+
+.dt-title h2 {
+  font-size: 7.2rem;
+  color: #000;
+}
+
+/* dt-menu */
+
+.dt-menu {
+  margin-top: 8rem;
+}
+
+.dt-menu ul li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.dt-menu ul li a {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.dt-menu ul li.on {
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #d50037;
+}
+.dt-menu ul li.on a {
+  color: #d50037;
+}
+/* di-slide */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: static;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.swiper-slide img {
+  display: block;
+  max-width: 80rem;
+  max-height: 50rem;
+  object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 0;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 0;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: none;
+}
+
+.swiper-button-prev {
+  width: 6.4rem;
+  height: 6.4rem;
+  background: url("https://www.twosome.co.kr/resources/images/icon/btn_prev.svg")
+    no-repeat center center;
+  background-size: cover;
+}
+
+.swiper-button-next {
+  width: 6.4rem;
+  height: 6.4rem;
+  background: url("https://www.twosome.co.kr/resources/images/icon/btn_next.svg");
+  background-size: cover;
+}
+.dt-slide {
+  margin-top: 8rem;
+  text-align: center;
+  position: relative;
+}
+
+.dt-slide .dt-gray {
+  background-color: #f5f5f5;
+  position: relative;
+  padding: 12rem 0;
+}
+
+.dt-slide .dt-content {
+  margin-top: -5rem;
+  position: relative;
+}
+
+.dt-slide .dt-content h3 {
+  font-size: 5.5rem;
+  color: #000;
+  font-weight: 900;
+}
+
+.dt-slide .dt-content dl dt {
+  margin-top: 2.8rem;
+  font-size: 3.4rem;
+  font-weight: bold;
+}
+
+.dt-slide .dt-content dl dd {
+  margin-top: 2.9rem;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 900px) {
+  /* setion */
+  .dt-main {
+    max-width: none;
+    padding: 9rem 3rem 10rem;
+  }
+  .dt-menu {
+    margin-top: 5.5rem;
+  }
+  .dt-menu ul li + li {
+    margin-left: 3rem;
+  }
+
+  .dt-menu ul li a {
+    font-size: 2.7rem;
+  }
+
+  .dt-title h2 {
+    font-size: 5.2rem;
+  }
+  .dt-slide .dt-gray {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    padding: 6rem 5.2rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 5rem;
+    height: 5rem;
+  }
+  .dt-nav {
+    display: none;
+  }
+
+  .dt-drive-in {
+    display: none;
+  }
+  .dt-slide .dt-content dl dd {
+    font-size: 2.67rem;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 500rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body {
+    font-size: 4px;
+  }
+
+  /* section */
+  .dt-nav {
+    display: none;
+  }
+  .dt-title h2 {
+    margin-top: 5rem;
+    font-size: 5.2rem;
+  }
+
+  .dt-menu {
+    margin-top: 4rem;
+  }
+  .dt-menu ul li + li {
+    margin-left: 2rem;
+  }
+
+  .dt-menu ul li a {
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .dt-slide {
+    margin-top: 8rem;
+  }
+  .dt-slide .dt-gray {
+    margin-left: -4rem;
+    margin-right: -4rem;
+    padding: 10rem 8rem;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    max-height: 300rem;
+    height: auto;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 8rem;
+    height: 8rem;
+  }
+
+
+  .dt-slide .dt-content dl {
+    margin-top: 5rem;
+  }
+
+  .dt-slide .dt-content dl dt {
+    line-height: 1.5;
+    letter-spacing: 0.4rem;
+  }
+
+  .dt-slide .dt-content dl dd {
+    line-height: 1.6;
+    letter-spacing: 0.2rem;
+  }
+  .dt-drive-in {
+    display: none;
+  }
+}

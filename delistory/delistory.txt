@@ -1,0 +1,27 @@
+div#container
+	section
+		header
+			ul
+				li
+				li
+		div.delistory
+			h1
+			div.deli_contents
+				div.deli_txt
+					h2.deli_engtitle
+					p.deli_subtitle
+					p.deli_desc
+				div.deli_img
+					img
+			div.deli_menu_slide
+				div.menu_slide_item1
+					div.menu_txt
+						p.menu_kortitle
+						p.menu_engtitle
+					div.slide_img
+						a
+							img
+				div.slide_prevbtn
+					i
+				div.slide_nxtbtn
+					i
